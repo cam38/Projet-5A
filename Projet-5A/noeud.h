@@ -3,6 +3,8 @@
 
 #include "thread.h"
 
+const int NB_THREADS_MAX = 20 ;
+
 class Noeud
 {
 private :
