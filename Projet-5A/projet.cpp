@@ -1,6 +1,18 @@
 #include "projet.h"
 
-Projet::Projet()
+Projet::Projet(int nbN)
 {
+    nbNoeuds = nbN ;
+    listeNoeuds = new Noeud * [NB_NOEUDS_MAX];
+    for (int i = 0 ; i<nbN ; i++){
+        listeNoeuds[i] = new Noeud[NB_THREADS_MAX];
+    }
 
 }
+
+int Projet::getNbNoeuds()
+{
+    return nbNoeuds ;
+
+}
+

@@ -3,22 +3,24 @@
 
 #include "noeud.h"
 
+const int NB_NOEUDS_MAX = 20 ;
+
 class Projet
 {
 private :
     int nbNoeuds ;
-    Noeud * noeud ;
+    Noeud ** listeNoeuds ;
 
 public:
-    Projet();
+    Projet(int nbN);
     //constructeur de recopie ?
-    ~Projet();
+    //~Projet();
 
-    void setNbNoeuds(int nbN);
+    //void setNbNoeuds(int nbN);
     int getNbNoeuds();
 
-    void ajouterNoeuds(Noeud n);
-    void retirerNoeuds(Noeud n);
+    //void ajouterNoeuds(Noeud n);
+    //void retirerNoeuds(Noeud n);
 
     //void genererCode()
 };
