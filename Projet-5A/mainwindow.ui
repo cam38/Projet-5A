@@ -14,8 +14,30 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuNouveau_fichier">
+    <property name="title">
+     <string>Nouveau fichier</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNouveau_projet"/>
+   </widget>
+   <addaction name="menuNouveau_fichier"/>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNouveau_projet">
+   <property name="text">
+    <string>Nouveau projet</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

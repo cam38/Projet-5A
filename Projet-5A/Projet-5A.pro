@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     noeud.cpp \
+    parametrageprojet.cpp \
     projet.cpp \
     thread.cpp
 
@@ -22,11 +23,13 @@ HEADERS += \
     capteur.h \
     mainwindow.h \
     noeud.h \
+    parametrageprojet.h \
     projet.h \
     thread.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    parametrageprojet.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
