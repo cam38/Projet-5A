@@ -21,7 +21,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionNouveau_projet_triggered()
 {
-    parametrageProjet f(this);
-    f.exec();
+     parametrageProjet f(this);
+     f.exec();
+     *p = f.getProjet();
+     cout << p->getNbNoeuds() << endl ;
 }
 
