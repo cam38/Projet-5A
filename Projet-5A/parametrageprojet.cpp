@@ -1,7 +1,6 @@
 #include "parametrageprojet.h"
 #include "ui_parametrageprojet.h"
 
-
 using namespace std ;
 
 parametrageProjet::parametrageProjet(QWidget *parent) :
@@ -16,6 +15,12 @@ parametrageProjet::~parametrageProjet()
     delete ui;
 }
 
+Projet parametrageProjet::getProjet()
+{
+    return *proj ;
+}
+
+
 void parametrageProjet::on_lineEdit_textEdited(const QString &arg1)
 {
     bool ok ;
@@ -29,7 +34,12 @@ void parametrageProjet::on_lineEdit_textEdited(const QString &arg1)
 
 void parametrageProjet::on_pushButton_clicked()
 {
-    p = new Projet(nbNoeudsNonValide);
-    cout << p->getNbNoeuds() << endl ;
+    proj = new Projet(nbNoeudsNonValide);
+    this->close();
+
 }
+
+
+
+
 
