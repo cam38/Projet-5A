@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QToolButton>
+#include <QPushButton>
+#include <QGridLayout>
+
+#include <QString>
 
 #include "projet.h"
 
@@ -17,11 +22,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void creerNoeuds();
+
 private slots:
     void on_actionNouveau_projet_triggered();
 
 private:
     Ui::MainWindow *ui;
     Projet * p ;
+    QPushButton ** listeNoeudGraphique ;
+
+
 };
 #endif // MAINWINDOW_H
