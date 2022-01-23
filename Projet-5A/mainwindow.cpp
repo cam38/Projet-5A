@@ -26,15 +26,17 @@ void MainWindow::on_actionNouveau_projet_triggered()
      parametrageProjet f(this);
      f.exec();
 
+
+
      *p = f.getProjet();
 
      //Création graphique de tout les noeuds
-     creerNoeuds();
+     creerNoeudsGraphiques();
 
 }
 
 //GERER LE CAS DU NOMBRE DE NOEUD QUI DEPASSE LE CADRE DE LA FENETRE
-void MainWindow::creerNoeuds()
+void MainWindow::creerNoeudsGraphiques()
 {
     int nb_noeuds_ligne = 0 ;
     int num_ligne = 0 ;
@@ -44,7 +46,10 @@ void MainWindow::creerNoeuds()
     for (int i = 0; i<p->getNbNoeuds() ; i++){
 
          nomNoeuds += QString::number(i+1);
+
          listeNoeudGraphique[i] = new QPushButton(nomNoeuds,this);
+         QObject::connect(listeNoeudGraphique[i], SIGNAL(clicked()),this, SLOT(on_pushButtonClicked()));
+
          nomNoeuds = "Noeud" ;
          listeNoeudGraphique[i]->resize(100, 40);
 
@@ -57,6 +62,11 @@ void MainWindow::creerNoeuds()
          listeNoeudGraphique[i]->show();
 
     }
+
+}
+
+void MainWindow::on_pushButtonClicked()
+{
 
 }
 

@@ -24,13 +24,14 @@ public:
 
 private slots:
 
-    void on_pushButton_clicked();
+    void on_pushButtonClicked();
 
 private:
     Ui::popUpNbNoeudsMax *ui;
     QLabel * label ;
     QPushButton * buttonOK ;
     QVBoxLayout * VLayout;
+    QString msg_label ;
 
 };
 

@@ -12,14 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_popUpNbNoeudsMax
 {
 public:
-    QPushButton *pushButton;
 
     void setupUi(QDialog *popUpNbNoeudsMax)
     {
@@ -29,9 +27,6 @@ public:
         QFont font;
         font.setPointSize(8);
         popUpNbNoeudsMax->setFont(font);
-        pushButton = new QPushButton(popUpNbNoeudsMax);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(80, 70, 41, 18));
 
         retranslateUi(popUpNbNoeudsMax);
 
@@ -41,7 +36,6 @@ public:
     void retranslateUi(QDialog *popUpNbNoeudsMax)
     {
         popUpNbNoeudsMax->setWindowTitle(QCoreApplication::translate("popUpNbNoeudsMax", "Dialog", nullptr));
-        pushButton->setText(QCoreApplication::translate("popUpNbNoeudsMax", "OK", nullptr));
     } // retranslateUi
 
 };

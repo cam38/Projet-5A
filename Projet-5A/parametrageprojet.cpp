@@ -40,6 +40,9 @@ void parametrageProjet::on_pushButton_clicked()
     if (nbNoeudsNonValide > NB_NOEUDS_MAX){
         popUpNbNoeudsMax p(this);
         p.exec();
+        nbNoeudsNonValide = NB_NOEUDS_MAX ;
+        proj = new Projet(nbNoeudsNonValide);
+        this->close();
     }
     else {
         proj = new Projet(nbNoeudsNonValide);

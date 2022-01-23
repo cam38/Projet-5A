@@ -25,10 +25,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void creerNoeuds();
+    void creerNoeudsGraphiques();
 
 private slots:
     void on_actionNouveau_projet_triggered();
+    void on_pushButtonClicked();
 
 private:
     Ui::MainWindow *ui;
