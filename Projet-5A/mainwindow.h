@@ -14,6 +14,9 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+const int SIZE_X_WINDOW = 860 , SIZE_Y_WINDOW = 560 ;
+
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -30,6 +33,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Projet * p ;
+    //int size_x ;
+    //int size_y ;
     QPushButton ** listeNoeudGraphique ;
 
 
