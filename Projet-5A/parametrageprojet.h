@@ -5,6 +5,8 @@
 #include <QCloseEvent>
 
 #include "projet.h"
+#include "popupnbnoeudsmax.h"
+
 
 #include <iostream>
 

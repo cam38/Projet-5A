@@ -37,8 +37,14 @@ void parametrageProjet::on_lineEdit_textEdited(const QString &arg1)
 //      - nbNoeuds > nbNoeudMax
 void parametrageProjet::on_pushButton_clicked()
 {
-    proj = new Projet(nbNoeudsNonValide);
-    this->close();
+    if (nbNoeudsNonValide > NB_NOEUDS_MAX){
+        popUpNbNoeudsMax p(this);
+        p.exec();
+    }
+    else {
+        proj = new Projet(nbNoeudsNonValide);
+        this->close();
+    }
 
 }
 
