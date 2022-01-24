@@ -73,7 +73,6 @@ void MainWindow::on_pushButtonClicked()
     parametrageNoeud pn(this);
     pn.exec() ;
 
-
     Noeud * n = pn.getNoeud();
     cout << "ok1" << endl ;
     p->ajouterNoeuds(n,3);
