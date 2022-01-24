@@ -29,8 +29,6 @@ void MainWindow::on_actionNouveau_projet_triggered()
 
      *p = f.getProjet();
 
-     cout << "ok" << endl ;
-
      //Création graphique de tout les noeuds
      creerNoeudsGraphiques();
 
@@ -76,8 +74,12 @@ void MainWindow::on_pushButtonClicked()
     pn.exec() ;
 
 
-    Noeud n = pn.getNoeud();
+    Noeud * n = pn.getNoeud();
+    cout << "ok1" << endl ;
     p->ajouterNoeuds(n,3);
+    cout << "ok2" << endl ;
+    //(p->getListeNoeuds())[3]->getNom() ;
+    cout << ((p->getListeNoeuds())[3]->getNom()).toStdString() << endl ;
 
     /*
     cout << n.getNbThreads() << endl ;

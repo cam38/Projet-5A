@@ -21,7 +21,7 @@ public:
 
     Noeud ** getListeNoeuds();
 
-    void ajouterNoeuds(Noeud n, int i);
+    void ajouterNoeuds(Noeud * n, int i);
     //void retirerNoeuds(Noeud n);
 
     //void genererCode()

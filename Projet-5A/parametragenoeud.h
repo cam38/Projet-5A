@@ -17,7 +17,7 @@ public:
     explicit parametrageNoeud(QWidget *parent = nullptr);
     ~parametrageNoeud();
 
-    Noeud getNoeud() ;
+    Noeud * getNoeud() ;
 
 private slots:
     void on_lineEdit_textEdited(const QString &arg1);

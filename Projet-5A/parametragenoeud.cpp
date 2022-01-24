@@ -15,9 +15,9 @@ parametrageNoeud::~parametrageNoeud()
     delete ui;
 }
 
-Noeud parametrageNoeud::getNoeud()
+Noeud * parametrageNoeud::getNoeud()
 {
-    return *noeud ;
+    return noeud ;
 }
 
 
