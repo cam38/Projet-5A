@@ -4,3 +4,8 @@ Thread::Thread()
 {
 
 }
+
+Thread::~Thread()
+{
+
+}
