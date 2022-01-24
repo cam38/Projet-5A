@@ -49,6 +49,8 @@ void MainWindow::creerNoeudsGraphiques()
          nomNoeuds += QString::number(i+1);
 
          listeNoeudGraphique[i] = new QPushButton(nomNoeuds,this);
+
+         //placeBoutonListe = i ;
          QObject::connect(listeNoeudGraphique[i], SIGNAL(clicked()),this, SLOT(on_pushButtonClicked()));
 
          nomNoeuds = "Noeud" ;
@@ -69,16 +71,20 @@ void MainWindow::creerNoeudsGraphiques()
 void MainWindow::on_pushButtonClicked()
 {
 
-    /*
+
     parametrageNoeud pn(this);
     pn.exec() ;
 
-    *n = pn.getNoeud();
 
-    cout << n->getNbThreads() << endl ;
-    cout << n->getNom().toStdString() << endl ;
-    cout <<  n->getType().toStdString() << endl ;
+    Noeud n = pn.getNoeud();
+    p->ajouterNoeuds(n,3);
+
+    /*
+    cout << n.getNbThreads() << endl ;
+    cout << n.getNom().toStdString() << endl ;
+    cout << n.getType().toStdString() << endl ;
     */
+
 
 }
 

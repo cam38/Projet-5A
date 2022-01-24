@@ -34,10 +34,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Projet * p ;
-    //int size_x ;
-    //int size_y ;
     QPushButton ** listeNoeudGraphique ;
-    //Noeud * n ;
+    //int placeBoutonListe = 0 ;
 
 
 };
