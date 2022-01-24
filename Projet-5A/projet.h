@@ -19,7 +19,9 @@ public:
     //void setNbNoeuds(int nbN);
     int getNbNoeuds();
 
-    //void ajouterNoeuds(Noeud n);
+    Noeud ** getListeNoeuds();
+
+    void ajouterNoeuds(Noeud n, int i);
     //void retirerNoeuds(Noeud n);
 
     //void genererCode()

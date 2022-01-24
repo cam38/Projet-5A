@@ -16,3 +16,12 @@ int Projet::getNbNoeuds()
 
 }
 
+Noeud ** Projet::getListeNoeuds()
+{
+    return listeNoeuds ;
+}
+
+void Projet::ajouterNoeuds(Noeud n, int i)
+{
+    *listeNoeuds[i] = n ;
+}
