@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#include <QString>
+
 using namespace std ;
 
 typedef struct   {
@@ -14,10 +16,10 @@ typedef struct   {
 class Capteur
 {
 private:
-    string nom ;
-    string type;
+    QString nom ;
+    QString type;
     frequence freq ;
-    string imagePath ;
+    QString imagePath ;
 
 public:
     Capteur();
@@ -26,14 +28,17 @@ public:
     void setFrequence(int nbT, char period);
     frequence getFrequence();
 
-    void setNom(string nom);
-    string getNom();
+    void setNom(QString nom);
+    QString getNom();
 
-    void setType(string type);
-    string getType();
+    void setType(QString type);
+    QString getType();
 
-    void setImagePath(string imPath);
-    string getImagePath();
+    void setImagePath(QString imPath);
+    QString getImagePath();
+
+    Capteur& operator=(const Capteur& c);
+
 };
 
 
