@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "parametrageprojet.h"
+#include "parametragenoeud.h"
 
 #include <iostream>
 
@@ -26,9 +27,9 @@ void MainWindow::on_actionNouveau_projet_triggered()
      parametrageProjet f(this);
      f.exec();
 
-
-
      *p = f.getProjet();
+     cout << "ok" << endl ;
+
 
      //Création graphique de tout les noeuds
      creerNoeudsGraphiques();
@@ -67,7 +68,14 @@ void MainWindow::creerNoeudsGraphiques()
 
 void MainWindow::on_pushButtonClicked()
 {
+    parametrageNoeud pn(this);
+    pn.exec() ;
 
+    *n = pn.getNoeud();
+
+    cout << n->getNbThreads() << endl ;
+    cout << n->getNom().toStdString() << endl ;
+    cout <<  n->getType().toStdString() << endl ;
 }
 
 

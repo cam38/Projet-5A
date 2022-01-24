@@ -37,6 +37,7 @@ private:
     //int size_x ;
     //int size_y ;
     QPushButton ** listeNoeudGraphique ;
+    Noeud * n ;
 
 
 };
