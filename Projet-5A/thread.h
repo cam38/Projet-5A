@@ -14,7 +14,7 @@ private :
 
 public:
     Thread();
-    //constructeur de recopie ?
+    Thread(const Thread& t);
     ~Thread();
 
     void setNumNoeud(int numN);
@@ -28,6 +28,9 @@ public:
 
     void ajouterAction(Action a);
     void retirerAction(Action a);
+
+    Thread& operator=(const Thread& t);
+
 
     // genererCode()
 };
