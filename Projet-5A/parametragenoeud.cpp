@@ -17,7 +17,7 @@ parametrageNoeud::~parametrageNoeud()
 
 Noeud parametrageNoeud::getNoeud()
 {
-    return * noeud ;
+    return *noeud ;
 }
 
 
@@ -26,10 +26,10 @@ void parametrageNoeud::on_lineEdit_textEdited(const QString &arg1)
     nomNoeud = arg1 ;
 }
 
-
 void parametrageNoeud::on_comboBox_textActivated(const QString &arg1)
 {
     typeNoeud = arg1 ;
+
 }
 
 
@@ -50,14 +50,15 @@ void parametrageNoeud::on_pushButton_clicked()
         popUpNbThreadsMax ppT(this);
         ppT.exec();
         nbThread = NB_THREADS_MAX ;
-        //noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
-        noeud = new Noeud();
+        noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
+        //noeud = new Noeud();
         this->close();
     }
     else {
-        //noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
-        noeud = new Noeud();
+        noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
+        //noeud = new Noeud();
         this->close();
     }
 }
+
 
