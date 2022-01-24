@@ -26,7 +26,6 @@ popUpNbNoeudsMax::popUpNbNoeudsMax(QWidget *parent) :
 
     this->setLayout(VLayout);
 
-    cout << "hey" << endl ;
 
 
 }
