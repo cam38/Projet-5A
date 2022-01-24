@@ -34,7 +34,6 @@ void parametrageProjet::on_lineEdit_textEdited(const QString &arg1)
 
 //Ajout gestion des erreurs :
 //      - nbNoeuds != int
-//      - nbNoeuds > nbNoeudMax
 void parametrageProjet::on_pushButton_clicked()
 {
     if (nbNoeudsNonValide > NB_NOEUDS_MAX){
