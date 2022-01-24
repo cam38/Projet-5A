@@ -3,26 +3,29 @@
 
 #include "thread.h"
 
+#include <QString>
+
 const int NB_THREADS_MAX = 20 ;
 
 class Noeud
 {
 private :
-    string nom ;
-    string type ;
+    QString nom ;
+    QString type ;
     int nbThreads ;
-    Thread * listeThreads ;
+    Thread ** listeThreads ;
 
 public:
-    Noeud();
+    Noeud() ;
+    Noeud(QString nomNoeud, QString typeNoeud, int nbT);
     //constructeur de recopie ?
     ~Noeud();
 
-    void setNom(string nom);
-    string getNom();
+    void setNom(QString nom);
+    QString getNom();
 
-    void setType(string type);
-    string getType();
+    void setType(QString type);
+    QString getType();
 
     void setNbThreads(int nbT);
     int getNbThreads();
