@@ -17,7 +17,7 @@ private :
 
 public:
     Noeud() ;
-    Noeud(QString nomNoeud, QString typeNoeud, int nbT);
+    //Noeud(QString nomNoeud, QString typeNoeud, int nbT);
     //constructeur de recopie ?
     ~Noeud();
 

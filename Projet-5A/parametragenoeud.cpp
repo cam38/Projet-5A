@@ -50,11 +50,13 @@ void parametrageNoeud::on_pushButton_clicked()
         popUpNbThreadsMax ppT(this);
         ppT.exec();
         nbThread = NB_THREADS_MAX ;
-        noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
+        //noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
+        noeud = new Noeud();
         this->close();
     }
     else {
-        noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
+        //noeud = new Noeud(nomNoeud,typeNoeud,nbThread);
+        noeud = new Noeud();
         this->close();
     }
 }

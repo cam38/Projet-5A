@@ -1,9 +1,20 @@
 #include "noeud.h"
 
+
 Noeud::Noeud()
 {
+    /*
+    nom = "" ;
+    type = "" ;
+    nbThreads = 0 ;
+    listeThreads = new Thread * [NB_THREADS_MAX];
+    for (int i = 0 ; i<nbThreads ; i++){
+        listeThreads[i] = new Thread[NB_THREADS_MAX]; // pas sur
+    }
+    */
 }
 
+/*
 Noeud::Noeud(QString nomNoeud, QString typeNoeud, int nbT)
 {
     nom = nomNoeud ;
@@ -14,6 +25,7 @@ Noeud::Noeud(QString nomNoeud, QString typeNoeud, int nbT)
         listeThreads[i] = new Thread[NB_THREADS_MAX]; // pas sur
     }
 }
+*/
 
 Noeud::~Noeud(){}
 
