@@ -14,8 +14,10 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     noeud.cpp \
+    parametragenoeud.cpp \
     parametrageprojet.cpp \
     popupnbnoeudsmax.cpp \
+    popupnbthreadsmax.cpp \
     projet.cpp \
     thread.cpp
 
@@ -24,15 +26,19 @@ HEADERS += \
     capteur.h \
     mainwindow.h \
     noeud.h \
+    parametragenoeud.h \
     parametrageprojet.h \
     popupnbnoeudsmax.h \
+    popupnbthreadsmax.h \
     projet.h \
     thread.h
 
 FORMS += \
     mainwindow.ui \
+    parametragenoeud.ui \
     parametrageprojet.ui \
-    popupnbnoeudsmax.ui
+    popupnbnoeudsmax.ui \
+    popupnbthreadsmax.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
