@@ -17,8 +17,8 @@ private :
 
 public:
     Noeud() ;
-    //Noeud(QString nomNoeud, QString typeNoeud, int nbT);
-    //constructeur de recopie ?
+    Noeud(QString nomNoeud, QString typeNoeud, int nbT);
+    Noeud(const Noeud& n);
     ~Noeud();
 
     void setNom(QString nom);
@@ -32,6 +32,8 @@ public:
 
     void ajouterThread(Thread t);
     void retirerThread(Thread t);
+
+    Noeud& operator=(const Noeud& n);
 
     //generer code ?
 

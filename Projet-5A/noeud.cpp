@@ -3,18 +3,10 @@
 
 Noeud::Noeud()
 {
-    /*
-    nom = "" ;
-    type = "" ;
-    nbThreads = 0 ;
-    listeThreads = new Thread * [NB_THREADS_MAX];
-    for (int i = 0 ; i<nbThreads ; i++){
-        listeThreads[i] = new Thread[NB_THREADS_MAX]; // pas sur
-    }
-    */
+
 }
 
-/*
+
 Noeud::Noeud(QString nomNoeud, QString typeNoeud, int nbT)
 {
     nom = nomNoeud ;
@@ -25,7 +17,17 @@ Noeud::Noeud(QString nomNoeud, QString typeNoeud, int nbT)
         listeThreads[i] = new Thread[NB_THREADS_MAX]; // pas sur
     }
 }
-*/
+
+Noeud::Noeud(const Noeud& n)
+{
+    nom = n.nom;
+    type = n.type ;
+    nbThreads = n.nbThreads;
+    listeThreads = new Thread * [NB_THREADS_MAX];
+    for (int i=0;i<nbThreads;i++)
+        listeThreads[i] = n.listeThreads[i];
+
+}
 
 Noeud::~Noeud(){}
 
@@ -57,4 +59,20 @@ void Noeud::setNbThreads(int nbT)
 int Noeud::getNbThreads()
 {
     return nbThreads ;
+}
+
+Noeud& Noeud::operator=(const Noeud& n)
+{
+    if (this != &n)
+    {
+        delete listeThreads[NB_ACTIONS_MAX];
+        nom = n.nom;
+        type = n.type ;
+        nbThreads = n.nbThreads;
+        listeThreads = new Thread * [NB_THREADS_MAX];
+        for (int i=0;i<nbThreads;i++)
+            listeThreads[i] = n.listeThreads[i];
+
+    }
+    return *this ;
 }
