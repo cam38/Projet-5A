@@ -14,19 +14,13 @@ popUpNbNoeudsMax::popUpNbNoeudsMax(QWidget *parent) :
 
     QObject::connect(buttonOK, SIGNAL(clicked()),this, SLOT(on_pushButtonClicked()));
 
-
-
-    //QString nb_noeuds_m = QString::number(NB_NOEUDS_MAX) ;
+    //message de la fenetre pop up
     msg_label = "Attention, nombre de noeuds max = " +  QString::number(NB_NOEUDS_MAX) ;
-    //msg_label += nb_noeuds_m ;
-
     label->setText(msg_label);
 
     VLayout->addWidget(label,Qt::AlignCenter);
 
     this->setLayout(VLayout);
-
-
 
 }
 

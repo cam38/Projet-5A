@@ -14,7 +14,7 @@ Noeud::Noeud(QString nomNoeud, QString typeNoeud, int nbT)
     nbThreads = nbT ;
     listeThreads = new Thread * [NB_THREADS_MAX];
     for (int i = 0 ; i<nbThreads ; i++){
-        listeThreads[i] = new Thread[NB_THREADS_MAX]; // pas sur
+        listeThreads[i] = new Thread[NB_ACTIONS_MAX]; // pas sur
     }
 }
 
