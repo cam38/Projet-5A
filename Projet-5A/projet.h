@@ -12,9 +12,10 @@ private :
     Noeud ** listeNoeuds ;
 
 public:
+    Projet();
     Projet(int nbN);
     //constructeur de recopie ?
-    //~Projet();
+    ~Projet();
 
     //void setNbNoeuds(int nbN);
     int getNbNoeuds();
@@ -22,7 +23,13 @@ public:
     Noeud ** getListeNoeuds();
 
     void ajouterNoeuds(Noeud * n, int i);
+
+    Noeud * getNoeudIndice(int indice);
     //void retirerNoeuds(Noeud n);
+
+    void afficher(QPainter * p);
+
+
 
     //void genererCode()
 };

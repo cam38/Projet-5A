@@ -4,6 +4,10 @@
 #include "thread.h"
 
 #include <QString>
+#include <QImage>
+#include <QLabel>
+#include <QPixmap>
+#include <QPainter>
 
 const int NB_THREADS_MAX = 20 ;
 
@@ -15,8 +19,14 @@ private :
     int nbThreads ;
     Thread ** listeThreads ;
 
+    //Graphique
+    int x ;
+    int y ;
+    QImage * image ;
+
 public:
-    Noeud() ;
+
+    Noeud(int xN, int yN) ;
     Noeud(QString nomNoeud, QString typeNoeud, int nbT);
     Noeud(const Noeud& n);
     ~Noeud();
@@ -30,8 +40,13 @@ public:
     void setNbThreads(int nbT);
     int getNbThreads();
 
+    int getX();
+    int getY();
+
     void ajouterThread(Thread t);
     void retirerThread(Thread t);
+
+    void afficher(QPainter * p, int x, int y);
 
     Noeud& operator=(const Noeud& n);
 

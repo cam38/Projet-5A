@@ -5,8 +5,10 @@
 #include <QToolButton>
 #include <QPushButton>
 #include <QGridLayout>
+#include <QPixmap>
 
 #include <QString>
+#include <iostream>
 
 #include "projet.h"
 
@@ -25,17 +27,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void creerNoeudsGraphiques();
-
 private slots:
+    void paintEvent(QPaintEvent* e);
     void on_actionNouveau_projet_triggered();
-    void on_pushButtonClicked();
 
 private:
     Ui::MainWindow *ui;
     Projet * p ;
-    QPushButton ** listeNoeudGraphique ;
-    //int placeBoutonListe = 0 ;
+
 
 
 };
