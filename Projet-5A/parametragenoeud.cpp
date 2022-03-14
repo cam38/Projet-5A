@@ -44,7 +44,6 @@ void parametrageNoeud::on_lineEdit_2_textEdited(const QString &arg1)
 
 }
 
-
 void parametrageNoeud::on_pushButton_clicked()
 {
     //Si le nombre de thread est supérieur au nombre max, une fenetre pop up apparait

@@ -9,8 +9,6 @@ Projet::Projet(int nbN)
 {
     nbNoeuds = nbN ;
 
-    cout << "la" << endl ;
-
     int nb_noeuds_ligne = 0 ;
     int num_ligne = 0 ;
 
@@ -67,8 +65,6 @@ void Projet::afficher(QPainter * p){
        nomNoeuds += QString::number(i+1);
        nomNoeuds = "Noeud" ;
 
-       cout << "ici" << endl ;
-       cout << listeNoeuds[i]->getX() << endl ;
        listeNoeuds[i]->afficher(p,listeNoeuds[i]->getX(),listeNoeuds[i]->getY());
 
     }
